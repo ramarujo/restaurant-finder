@@ -1,11 +1,10 @@
 import type { NextPage } from 'next'
+import { Header } from '../components/organisms/Header/index'
 
 const Home: NextPage = () => {
   return (
     <>
-      <div>
-        Hello ( ◑‿◑)ɔ┏🍟--🍔┑٩(^◡^ )
-      </div>
+      <Header />
     </>
   )
 }
