@@ -14,9 +14,9 @@ const Filter = (): React.ReactElement => {
     if ( newData?.length! > 0 ) {
       try {
         const { data } = await RestaurantService.get(newData?.[0].id!)
-        console.log(data)
         handleAddRestaurants?.( [ data.data ] )
       } catch (err) {
+        console.log(err)
       } 
     }
 
