@@ -1,11 +1,12 @@
 import React from 'react'
 import * as S from './styles'
 import { theme } from '../../../styles/theme'
+import defaultStyle, { Element } from '../../../Interfaces/typographyDefaultStyle'
 
 const Typography = ( ( {
   children,
   className,
-  color,
+  color = 'dark',
   sizeDesktop,
   sizeMobile,
   weight,
@@ -16,9 +17,9 @@ const Typography = ( ( {
       as={ as }
       className={ className }
       color={ color }
-      sizeDesktop={ sizeDesktop }
-      sizeMobile={ sizeMobile }
-      weight={ weight }
+      sizeDesktop={ sizeDesktop || defaultStyle[ as ].sizeDesktop }
+      sizeMobile={ sizeMobile || defaultStyle[ as ].sizeMobile }
+      weight={ weight || defaultStyle[ as ].weight }
     >
       { children }
     </S.Container>
@@ -27,7 +28,7 @@ const Typography = ( ( {
 
 namespace Typography {
   export interface Props {
-    as?: any
+    as?: Element
     children?: any
     className?: string
     color?: keyof typeof theme.colors
