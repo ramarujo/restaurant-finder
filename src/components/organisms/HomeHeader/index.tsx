@@ -1,12 +1,13 @@
 import { Typography } from '../../atoms/Typography'
 import React from 'react'
 import * as S from './styles'
+import { Header } from '../../molecules/Header'
+import bg from '../../../assets/images/background-image.png'
 
-const Header = (): React.ReactElement => {
+const HomeHeader = (): React.ReactElement => {
   return (
-    <S.Container>
-      <S.Content>
-        {/* Logo não será aplicado no projeto */}
+    <Header background={ bg.src } page="home">
+      <S.Container>
         <Typography
           as="h1"
           color="dark-down"
@@ -16,9 +17,9 @@ const Header = (): React.ReactElement => {
         <Typography>
           Aqui eu converso com você sobre nossa proposta
         </Typography>
-      </S.Content>
-    </S.Container>
+      </S.Container>
+    </Header>
   )
 }
 
-export { Header }
+export { HomeHeader }
