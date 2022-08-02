@@ -10,6 +10,7 @@ const Container = styled.section`
     background-color: transparent;
     max-width: 540px;
     margin: -120px auto 0;
+    padding: 32px 30px 42px;
   }
 `
 
