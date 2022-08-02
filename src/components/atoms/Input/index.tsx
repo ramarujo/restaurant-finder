@@ -15,7 +15,7 @@ const Input = ( { icon, onChange, placeholderText, value  }: Input.Props ): Reac
 namespace Input {
   export interface Props {
     icon?: any
-    onChange?: () => {}
+    onChange?: () => void
     placeholderText?: string
     value?: string | number
   }
