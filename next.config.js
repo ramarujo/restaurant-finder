@@ -8,7 +8,7 @@ const nextConfig = {
       displayName: true,
       fileName: true,
     },
-  }
+  },
 }
 
 module.exports = nextConfig
